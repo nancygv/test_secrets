@@ -21,3 +21,9 @@ jobs:
 
       - name: Run secrets.py
         run: python3 secrets.py ${{ secrets.USUARIO }} ${{ secrets.PASS }}
+
+  mensaje:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mensaje
+        run: echo "Mensaje prueba"
