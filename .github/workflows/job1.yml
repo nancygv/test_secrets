@@ -8,6 +8,8 @@ on:
 jobs:
   qa:
     runs-on: ubuntu-latest
+    environment:
+      name: qa
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -18,4 +20,4 @@ jobs:
           python-version: '3.8'
 
       - name: Run secrets.py
-        run: python3 .github/workflows/secrets.py nancy morado
+        run: python3 .github/workflows/secrets.py ${{ secrets.USUARIO }} ${{ secrets.PASS }}
