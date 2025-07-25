@@ -12,10 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python 3
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.8'
+      - name: Mensaje PR
+        run: echo "Este es el mensaje del PR para job2"
 
-      - name: Run secrets.py
-        run: python3 .github/workflows/secrets.py nancy morado
+
