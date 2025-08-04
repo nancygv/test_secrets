@@ -20,4 +20,13 @@ jobs:
           python-version: '3.8'
 
       - name: Run secrets.py
-        run: python3 secrets.py ${{ secrets.USUARIO }} ${{ secrets.PASS }}
+        run: |
+         python3 secrets.py ${{ secrets.USUARIO }} ${{ secrets.PASS }}
+         echo "Mi usuario es: ${{ secrets.USUARIO }}"
+         echo "Mi pass es: ${{ secrets.PASS }}"
+
+  mensaje:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mensaje
+        run: echo "Mensaje prueba"
